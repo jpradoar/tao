@@ -1,0 +1,127 @@
+:root{
+  --card-w:63mm;
+  --card-h:88mm;
+  --token-w:19mm;
+  --token-h:19mm;
+  --card-bg:#000000;
+  --card-border:#555555;
+  --accent:#77FF99;
+  --muted:#879599;
+  --panel:#323840;
+
+}
+/*@media print {
+  body { background: white; }
+  .page { page-break-after: always; }
+}*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1mm;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3mm;
+  justify-content: center;
+  -webkit-print-color-adjust: exact;
+}
+.card {
+  width: var(--card-w);
+  height: var(--card-h);
+  background: var(--card-bg);
+  color: var(--accent);
+  border: 1mm solid var(--card-border);
+  border-radius: 4mm;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 2mm;
+}
+.token {
+  width: var(--token-w);
+  height: var(--token-h);
+  background: var(--card-bg);
+  border-radius: 2mm;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+}
+.team_blue {
+    border: 2mm solid #0000FF;
+}
+.team_red {
+    border: 2mm solid #B22222;
+}
+.card-title {
+  background: var(--panel);
+  color: var(--muted);
+  text-align: center;
+  padding: 1mm 2mm;
+  font-weight: bold;
+  border-radius: 2mm;
+  font-size: 10pt;
+  margin-bottom: 2mm;
+}
+.card-title2 {
+  background: var(--panel);
+  color: var(--muted);
+  text-align: left;
+  padding: 1mm 2mm;
+  font-weight: bold;
+  border-radius: 2mm;
+  font-size: 10pt;
+  margin-bottom: 2mm;
+}
+
+.card-image {
+  height: 18mm;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2mm;
+  margin-bottom: 2mm;
+}
+.card-image img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
+  font-size: 9pt;
+  margin-top: 1mm;
+  flex: 1 1 auto;
+}
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--panel);
+  padding: 1px 1px;
+  border-radius: 1mm;
+}
+.stat-row-center {
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 8pt;
+  color: #ffffff;
+}
+.stat-row-attr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--panel);
+  padding: 1px 1px;
+  border-radius: 1mm;
+  font-size: 8pt;
+}
+.stat-label { color: var(--muted); font-size: 8.5pt; }
+.stat-value { color: var(--accent); font-weight: bold; }
+.stat-target img { max-height: 14mm; max-width: 15mm; display:block; margin-left:auto; margin-right:auto; }
